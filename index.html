@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vendor/clipboard.js-2.0.10/clipboard.min.js"></script>
+    <title>Document</title>
+    <style>
+        .caja {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="boton" data-clipboard-text="Boton 1">Boton 1</button>
+    <div class="caja" data-clipboard-text="Caja 1">Caja 1</div>
+    <div class="caja" data-clipboard-text="Caja 2">Caja 2</div>
+
+    <script>
+        var clipboard = new ClipboardJS("#boton");
+        clipboard = new ClipboardJS(".caja");
+    </script>
+</body>
+</html>
